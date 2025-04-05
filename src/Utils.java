@@ -1,9 +1,18 @@
 import java.util.Random;
 
-// Utility class for generating random arrays and checking sort correctness
+/**
+ * Utility class for generating random arrays and checking sort correctness.
+ */
 public class Utils {
 
-    // Generate a random int array of given size and range [min, max]
+    /**
+     * Generates a random integer array of a given size within the specified range [min, max].
+     *
+     * @param size the size of the array
+     * @param min  the minimum possible value (inclusive)
+     * @param max  the maximum possible value (inclusive)
+     * @return an array of random integers
+     */
     public static int[] generateRandomArray(int size, int min, int max) {
         Random random = new Random();
         int[] array = new int[size];
@@ -15,12 +24,22 @@ public class Utils {
         return array;
     }
 
-    // Overloaded version with default min=0 and max=9999
+    /**
+     * Overloaded version with default range [0, 9999].
+     *
+     * @param size the size of the array
+     * @return an array of random integers
+     */
     public static int[] generateRandomArray(int size) {
         return generateRandomArray(size, 0, 9999);
     }
 
-    // Check if an array is sorted in ascending order
+    /**
+     * Checks if the given array is sorted in ascending order.
+     *
+     * @param array the array to check
+     * @return true if sorted, false otherwise
+     */
     public static boolean isSorted(int[] array) {
         if (array == null || array.length < 2) return true;
 
